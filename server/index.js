@@ -4,7 +4,10 @@
 
 'use strict';
 
-var Hapi = require('hapi'),
+var fs = require('fs'),
+    path = require('path'),
+
+    Hapi = require('hapi'),
     config = require('./config'),
     routes = require('./routes');
 
@@ -35,6 +38,16 @@ var mongoOptions = {
 };
 
 // Setup logger
+// Precreate logs directory
+try {
+    fs.mkdirSync(
+        path.dirname(config.server.logsPath)
+    );
+} catch (err) {
+    if (err.code !== 'EEXIST') {
+        throw err;
+    }
+}
 server.register({
     register: require('good'),
     options: loggerOptions
