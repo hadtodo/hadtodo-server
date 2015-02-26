@@ -1,0 +1,39 @@
+{
+  "name": "hadtodo-server",
+  "version": "0.1.0",
+  "description": "hadtodo app backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hadtodo/hadtodo-server.git"
+  },
+  "keywords": [
+    "hadtodo",
+    "server",
+    "todo",
+    "list"
+  ],
+  "contributors": [
+    {
+      "name": "Mateusz \"m4tx\" Maćkowski",
+      "email": "m4tx@m4tx.pl",
+      "url": "http://m4tx.pl"
+    },
+    {
+      "name": "Michał \"poxip\" Proszek",
+      "email": "michal.proszek@gmail.com",
+      "url": "http://poxip.github.io"
+    }
+  ],
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/hadtodo/hadtodo-server/issues"
+  },
+  "homepage": "https://github.com/hadtodo/hadtodo-server",
+  "dependencies": {
+    "hapi": "^8.2.0"
+  }
+}
