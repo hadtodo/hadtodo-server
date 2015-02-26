@@ -2,7 +2,7 @@
   "name": "hadtodo-server",
   "version": "0.1.0",
   "description": "hadtodo app backend",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,6 +34,9 @@
   },
   "homepage": "https://github.com/hadtodo/hadtodo-server",
   "dependencies": {
+    "good": "^5.1.2",
+    "good-console": "^4.1.0",
+    "good-file": "^4.0.2",
     "hapi": "^8.2.0"
   }
 }
