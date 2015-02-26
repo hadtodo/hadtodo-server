@@ -14,7 +14,7 @@ server.connection({
     port: config.server.port
 });
 
-var options = {
+var loggerOptions = {
     opsInterval: 1000,
     reporters: [{
         reporter: require('good-console'),
@@ -25,9 +25,19 @@ var options = {
     }]
 };
 
+var mongoOptions = {
+    url: config.mongodb.url,
+    settings: {
+        db: {
+            native_parser: false
+        }
+    }
+};
+
+// Setup logger
 server.register({
     register: require('good'),
-    options: options
+    options: loggerOptions
 }, function (err) {
     if (err) {
         console.error(err);
@@ -36,6 +46,17 @@ server.register({
         server.start(function () {
             console.info("Server started at %s", server.info.uri);
         })
+    }
+});
+
+// Setup MongoDB
+server.register({
+    register: require('hapi-mongodb'),
+    options: mongoOptions
+}, function (err) {
+    if (err) {
+        console.log(err);
+        throw err;
     }
 });
 

@@ -12,7 +12,7 @@ var config = {};
 
 /**
  * Server configuration object
- * @typedef {{host, port}} ConfigServer
+ * @typedef {{host, port, logsPath}} ConfigServer
  */
 config.server = {};
 /**
@@ -34,5 +34,18 @@ config.server.port = process.env.PORT || 6000;
  * @type {string} [logsPath='./logs/server.log']
  */
 config.server.logsPath = './logs/server.log';
+
+/**
+ * MongoDB configuration object
+ * @typedef {{url}}
+ */
+config.mongodb = {};
+/**
+ * MongoDB address
+ * The url can include user:password to authenticate
+ * @type {string} [url='mongodb://0.0.0.0:27017']
+ */
+config.mongodb.url = 'mongodb://0.0.0.0:27017';
+
 
 module.exports = config;
