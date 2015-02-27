@@ -40,8 +40,8 @@ config.server.host = process.env.HOST || '0.0.0.0';
 /**
  * A port on which the server should be established,
  * by default uses environment varialbe 'PORT'
- * or if not set: 6000
- * @type {number} [port=6000]
+ * or if not set: 3000
+ * @type {number} [port=3000]
  */
 config.server.port = process.env.PORT || 3000;
 /**
