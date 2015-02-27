@@ -33,7 +33,7 @@ routes.setup = function setupRoutes (server) {
     server.route({
         method: 'GET',
         path: '/test',
-        handler: handlers.testHandler
+        handler: handlers.test
     });
 };
 
