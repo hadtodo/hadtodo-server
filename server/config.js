@@ -43,7 +43,7 @@ config.server.host = process.env.HOST || '0.0.0.0';
  * or if not set: 6000
  * @type {number} [port=6000]
  */
-config.server.port = process.env.PORT || 6000;
+config.server.port = process.env.PORT || 3000;
 /**
  * A path to the logs file
  * @type {string} [logsPath='./logs/server.log']
